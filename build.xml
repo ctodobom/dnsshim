@@ -51,6 +51,7 @@
 					value="br/registro/dnsshim/xfrd/server/XfrdLauncher" />
 				<attribute name="Class-Path" value="${manifest-classpath-xfrd} ." /> <!-- class-path  + current directory -->
 			</manifest>
+			<metainf dir="src/META-INF"/>
 		</jar>
 
 		<!-- copy dependencies -->
@@ -79,7 +80,7 @@
 		<map from="${lib.app.dir}" to="lib" /> <!-- to relative path -->
 		<path id="class.path">
 			<fileset dir="lib">
-				<!-- <include name="**/*.jar" /> -->
+				<include name="**/*.jar" />
 				<include name="*log4j*" />
 				<include name="*commons-codec*" />
 			</fileset>
